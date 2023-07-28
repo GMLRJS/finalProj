@@ -1,0 +1,59 @@
+let rec02Str = "<div class='h-full mr-10' style='width: 35%; float: left;'>";
+				rec02Str += "<img src='/resources/images/place/"+result[1].PICNIC_IMG+"' data-action='zoom' class='w-full rounded-md' style='height: 190px;' alt='"+result[1].PICNIC_NM+"'>";
+				rec02Str += "</div><div class='h-full' style='float: left';>";
+				rec02Str += "<h2 class='text-base mr-auto' style='font-size: 17px;'>"
+						+ result[1].WEEKEND_DATE
+						+ "&nbsp;"
+						+ result[1].WEEK + "</h2><br>";
+				rec02Str += "<h2 class='font-bold text-base mr-auto' style='font-size: 20px;'>"
+						+ result[1].PICNIC_NM + "</h2><br>";
+				rec02Str += "<h2 class='text-base mr-auto' style='font-size: 17px;'>영업시간 "
+						+ result[1].BSN_HOUR + "<br>";
+				rec02Str += result[1].PICNIC_TEL + "<br>";
+				rec02Str += result[1].PICNIC_ADRES + "<br>";
+				rec02Str += "<a href='"+result[1].PICNIC_URL+"' target='_blank'><h2 class='text-base' style='font-size: 17px; color: green;'>홈페이지</h2></a>";
+				rec02Str += "</div><div style='float:right;'>";
+				rec02Str += "<span style='font-size: 17px; color: blue;'>"
+						+ result[1].WETHR_LOW
+						+ "</span>/<span style='font-size: 17px; color: red;'> "
+						+ result[1].WETHR_HIGH + "</span><br>";
+				rec02Str += "<div style='float:right;'><img src='/resources/images/weather/"+result[1].WETHR_IMG+"' style='height: 40px;' alt='"+result[1].WETHR_INFO+"'></div><br><br>";
+				rec02Str += "</div>";
+				$(".rec02").html(rec02Str);
+				
+				
+				
+				
+				
+				
+				
+				<div class="tns-controls" aria-label="Carousel Navigation" tabindex="0"><button type="button" data-controls="prev" tabindex="-1" aria-controls="tns1">prev</button><button type="button" data-controls="next" tabindex="-1" aria-controls="tns1">next</button></div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				for (let i=0; i<clubVOList.length; i++){
+				
+				let str = "<div class='h-full mr-10' style='width: 35%; float: left;'>";
+				str += "<img src='/resources/upload"+clubVOList[i].clbImg+"' data-action='zoom' class='w-full rounded-md' style='height: 190px;' alt='"+clubVOList[i].clbNm+"'>";
+				str += "</div><div class='h-full' style='float: left';>";
+				str += "<h2 class='font-bold text-base mr-auto' style='font-size: 20px;'>"
+						+ clubVOList[i].clbNm + "</h2><br>";
+				str += "<h2 class='text-base mr-auto' style='font-size: 17px;'>회원수 "
+						+ clubVOList[i].clbNowNmpr + "<br>";
+				
+				str += "평균 연령 "+ clubVOList[i].clbAge + "<br>";
+				str += "<a href=/mem/cmnt/clubbbs target='_blank'><h2 class='text-base' style='font-size: 17px; color: green;'>동호회 보러가기</h2></a>";
+				str += "</div>";
+				str += "</div>";
+				$(".rec0"+(i+1)).html(str);
+				console.log(".rec0"+(i+1));
+			}
+			//추천 항목 카드 종료
